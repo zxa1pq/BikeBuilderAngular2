@@ -7,15 +7,14 @@ import { AppComponent } from './app.component';
 import { BikeComponent } from './bike.component';
 
 import { routing } from './app.routing';
-import { FrontpageComponent } from './frontpage.component';
 import {HttpModule } from '@angular/http';
-import { BlankComponent } from './blank.component';
+import { HomeComponent } from './Home.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, BikeComponent, FrontpageComponent, BlankComponent
+    AppComponent, BikeComponent, HomeComponent
   ],
   imports: [
     BrowserModule, routing, HttpModule
