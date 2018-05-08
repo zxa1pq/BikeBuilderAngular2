@@ -2,9 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+  <div class="container"  style="text-align:center; padding-top:3%;">
+  <router-outlet></router-outlet>
+  </div>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Customize your new Stseps e8000 ebullitt bike';
 }
