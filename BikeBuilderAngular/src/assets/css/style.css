@@ -6,7 +6,16 @@ Primary style
 *, *::after, *::before {
   box-sizing: border-box;
 }
+.mybut{
+  text-align: left!important;
+}
+.pb-5, .py-5 {
+  padding-bottom: 10rem!important;
+}
 
+.pt-5, .py-5 {
+  padding-top: 11rem!important;
+}
 html {
   font-size: 62.5%;
 }
