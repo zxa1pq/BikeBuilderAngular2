@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 @Component({
-    selector: 'app-bike',
-    templateUrl: `./bike.component.html`,
+    selector: 'app-bikecolor',
+    templateUrl: `./bikecolor.component.html`,
     styleUrls: ['./app.component.css']
 })
 
-export class BikeComponent {
+export class BikeColorComponent {
 
-    bikeimg = 'assets/img/E8000_white_Race.jpg';
+    bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
     myFunc() {
         console.log('function called');
       }
       constructor( private _router: Router) {
       }
-      start() {
-          this._router.navigate(['start']);
+      next() {
+          this._router.navigate(['accessories']);
         }
 }

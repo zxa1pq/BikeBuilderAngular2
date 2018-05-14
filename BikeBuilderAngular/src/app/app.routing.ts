@@ -1,8 +1,14 @@
 import { RouterModule } from '@angular/router';
-import { BikeComponent } from './bike.component';
 import { HomeComponent } from './Home.component';
+import { BikeSelectorComponent } from './bike-selector.component';
+import { BikeColorComponent } from './bikecolor.component';
+import { BikeAccessoryComponent } from './bikeaccessory.component';
+import { SummaryComponent } from './summary.component';
 
 export const routing = RouterModule.forRoot([
     { path: '', component: HomeComponent },
-    { path: 'start', component: BikeComponent }
+    { path: 'models', component: BikeSelectorComponent },
+    { path: 'colors', component: BikeColorComponent},
+    { path: 'accessories', component: BikeAccessoryComponent},
+    { path: 'summary', component: SummaryComponent}
 ]);

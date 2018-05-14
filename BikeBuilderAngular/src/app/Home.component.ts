@@ -12,6 +12,6 @@ export class HomeComponent {
     constructor( private _router: Router) {
     }
     start() {
-        this._router.navigate(['start']);
+        this._router.navigate(['models']);
       }
 }
