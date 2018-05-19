@@ -1,16 +1,17 @@
-import { Component, Input } from '@angular/core';
-import { BikeService } from './bike.service';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-bike',
     templateUrl: './bike.component.html',
-    providers: [BikeService]
 })
 
 export class BikeComponent {
-    bikes;
-    constructor(_bikeService: BikeService) {
-        this.bikes = _bikeService.Bikes();
-    }
+    _totalPrice: any;
+    bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
+    @Output() outputEvent: EventEmitter<any> = new EventEmitter();
     @Input() data;
+
+    bclick(user) {
+        this.outputEvent.emit(user.Price);
+    }
 }

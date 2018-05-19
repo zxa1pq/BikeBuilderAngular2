@@ -3,6 +3,11 @@
 Primary style
 
 -------------------------------- */
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -859,6 +864,7 @@ Builder top navigation
   }
   .cd-builder-main-nav a:hover {
     color: #FFB500;
+    font-size: 26px;
   }
   .cd-builder-main-nav .active a {
     border-color: #FFB500;

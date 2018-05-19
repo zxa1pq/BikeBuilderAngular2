@@ -10,7 +10,8 @@ import { BikeService } from './bike.service';
 
 @Component({
     selector: 'app-bikeselector',
-    templateUrl: './bike-selector.component.html'
+    templateUrl: './bike-selector.component.html',
+    providers: [BikeService]
 })
 
 export class BikeSelectorComponent {
@@ -19,19 +20,29 @@ export class BikeSelectorComponent {
     private db: AngularFireDatabase;
     private _router: Router;
     public ddb: FirebaseApp;
-    constructor(/*private db: AngularFireDatabase, private _router: Router, public ddb: FirebaseApp*/) {
-        // this.users = _bikeservice.Bikes();
+
+    private _totalPrice;
+    constructor(/*private db: AngularFireDatabase, private _router: Router, public ddb: FirebaseApp*/ bikeService: BikeService) {
+        this._totalPrice = 0;
+        this.users = bikeService.Bikes();
+        console.log(this.users);
 
     }
 
     ngOnInit() {
-        console.log(this.ddb);
+      /*  console.log(this.ddb);
         this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
         this.users = this.db.list('/');
-    }
+    */
+}
 
+handleEvent(value) {
+    console.log(value);
+    this._totalPrice = 0;
+    this._totalPrice += value;
 
-    next() {
-        this._router.navigate(['colors']);
+}
+    Colors() {
+     this._router.navigate(['colors']);
     }
 }
