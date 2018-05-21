@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { FirebaseAppName, FirebaseAppProvider, FirebaseApp } from 'angularfire2';
@@ -6,6 +6,7 @@ import { _firebaseAppFactory } from 'angularfire2/firebase.app.module';
 import { config1 } from './app.module';
 import { config } from './app.module';
 import { BikeService } from './bike.service';
+import { Bike } from './bike';
 
 
 @Component({
@@ -15,34 +16,58 @@ import { BikeService } from './bike.service';
 })
 
 export class BikeSelectorComponent {
-    bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
-    users;
-    private db: AngularFireDatabase;
+      private db: AngularFireDatabase;
     private _router: Router;
     public ddb: FirebaseApp;
+    bgimage = 'assets/img/schenley.jpg';
+    bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
+    bikes;
+    bikeSelected;
+    bike = new Bike();
+    _imageUrl;
+   _totalPrice;
 
-    private _totalPrice;
-    constructor(/*private db: AngularFireDatabase, private _router: Router, public ddb: FirebaseApp*/ bikeService: BikeService) {
+    @Output() outputEvent: EventEmitter<any> = new EventEmitter();
+
+    constructor(bikeService: BikeService, private _route: Router) {
+        this.bikeSelected = false;
         this._totalPrice = 0;
-        this.users = bikeService.Bikes();
-        console.log(this.users);
+        this._imageUrl = 'assets/img/bike-default.png';
+        this.bikes = bikeService.Bikes();
 
     }
 
     ngOnInit() {
-      /*  console.log(this.ddb);
-        this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
-        this.users = this.db.list('/');
-    */
-}
-
-handleEvent(value) {
-    console.log(value);
-    this._totalPrice = 0;
-    this._totalPrice += value;
-
-}
-    Colors() {
-     this._router.navigate(['colors']);
+        /*  console.log(this.ddb);
+          this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
+          this.users = this.db.list('/');
+      */
     }
+
+    toColors(user) {
+        this.bike = user;
+       this.outputEvent.emit(this.bike);
+       this._route.navigate(['/colors']);
+    }
+
+    selectedEvent(bike) { }
+    handleEvent(value) {
+        this.bike = value;
+        console.log(this.bike);
+        this.bike.Name = value.Name;
+        this.bike.Price = value.Price;
+        this.bike.Id = value.Id;
+        this.bike.imageurl = value.imageurl;
+
+        console.log(this.bike);
+        console.log(value);
+
+        this._totalPrice = 0;
+        this._totalPrice += value.Price;
+
+        this._imageUrl = value.imageurl;
+        this.bikeSelected = true;
+        console.log(this.bikeSelected);
+    }
+
 }

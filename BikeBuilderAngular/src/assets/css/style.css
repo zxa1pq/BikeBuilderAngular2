@@ -3,10 +3,28 @@
 Primary style
 
 -------------------------------- */
+#bg-row{
+  background-image: url('/assets/img/belfast.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 468px;
+  background-repeat: no-repeat;
+}
 .card {
   margin: 0 auto; /* Added */
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
+  padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 50px;
+  color: azure;
+  background-color: transparent;
+  font-size: 1.6rem;
 }
 *, *::after, *::before {
   box-sizing: border-box;
@@ -845,7 +863,11 @@ Builder top navigation
     font-size: 4.8rem;
   }
 }
-
+@media only screen and (min-width: 1024px) {
+  .cd-builder-main-nav {
+    border-bottom: 2px solid;
+    width: 45%;
+  }
 @media only screen and (min-width: 1024px) {
   .cd-builder-main-nav li {
     display: inline-block;
@@ -863,15 +885,15 @@ Builder top navigation
     transition: color .2s, border-color .2s;
   }
   .cd-builder-main-nav a:hover {
-    color: #FFB500;
+    color: #0072ff;
     font-size: 26px;
   }
   .cd-builder-main-nav .active a {
-    border-color: #FFB500;
-    color: #FFB500;
+    border-color: #0072ff;
+    color: #0072ff;
   }
   .cd-builder-main-nav .active a:hover {
-    color: #FFB500;
+    color: #0072ff;
   }
   .cd-builder-main-nav.disabled li:not(.active) a {
     color: rgba(93, 124, 137, 0.5);
@@ -950,8 +972,8 @@ Builder fixed bottom summary
     float: left;
   }
   .cd-builder-footer img {
-    width: 197px;
-    padding-right: 27px;
+    width: 213px;
+    padding-right: 8px;
     margin-right: 27px;
     border-right: 1px solid #e1e1e1;
     -webkit-transition: opacity .2s;
@@ -1022,10 +1044,10 @@ Builder fixed bottom summary
 .cd-builder-secondary-nav .next {
   z-index: 1;
   right: 0;
-  background: #FFB500;
+  background: #0072ff;
 }
 .cd-builder-secondary-nav .next:hover {
-  background: #ffbc1a;
+  background: #6eff1a;
 }
 .disabled .cd-builder-secondary-nav .next {
   background: rgba(93, 124, 137, 0.5);
@@ -1156,4 +1178,5 @@ Builder fixed bottom summary
   .cd-builder-secondary-nav > ul {
     margin-top: 32px;
   }
+}
 }

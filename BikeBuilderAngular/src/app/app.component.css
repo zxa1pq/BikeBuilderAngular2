@@ -324,7 +324,7 @@
       display: block;
     }
     .cd-builder-footer .selected-product, .cd-builder-footer img, .cd-builder-footer .tot-price {
-      float: left;
+  
     }
     .cd-builder-footer img {
       width: 197px;

@@ -9,12 +9,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class BikeColorComponent {
 
     bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
+    id;
+    constructor(private _router: Router, private _route: ActivatedRoute) {
+    }
+
+    ngOnInit() {
+        this._route.params.subscribe(params => {
+            this.id = params['id'];
+            console.log(this.id);
+        });
+    }
+    next() {
+        this._router.navigate(['accessories']);
+    }
     myFunc() {
         console.log('function called');
-      }
-      constructor( private _router: Router) {
-      }
-      next() {
-          this._router.navigate(['accessories']);
-        }
+    }
 }

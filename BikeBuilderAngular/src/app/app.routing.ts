@@ -9,6 +9,7 @@ export const routing = RouterModule.forRoot([
     { path: '', component: HomeComponent },
     { path: 'models', component: BikeSelectorComponent },
     { path: 'colors', component: BikeColorComponent},
+    { path: 'colors/:id', component: BikeColorComponent},
     { path: 'accessories', component: BikeAccessoryComponent},
     { path: 'summary', component: SummaryComponent}
 ]);

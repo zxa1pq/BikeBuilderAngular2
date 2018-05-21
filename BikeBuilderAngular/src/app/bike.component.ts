@@ -12,6 +12,6 @@ export class BikeComponent {
     @Input() data;
 
     bclick(user) {
-        this.outputEvent.emit(user.Price);
+        this.outputEvent.emit(user);
     }
 }
