@@ -16,7 +16,7 @@ import { Bike } from './bike';
 })
 
 export class BikeSelectorComponent {
-      private db: AngularFireDatabase;
+    private db: AngularFireDatabase;
     private _router: Router;
     public ddb: FirebaseApp;
     bgimage = 'assets/img/schenley.jpg';
@@ -25,7 +25,7 @@ export class BikeSelectorComponent {
     bikeSelected;
     bike = new Bike();
     _imageUrl;
-   _totalPrice;
+    _totalPrice;
 
     @Output() outputEvent: EventEmitter<any> = new EventEmitter();
 
@@ -44,10 +44,13 @@ export class BikeSelectorComponent {
       */
     }
 
-    toColors(user) {
-        this.bike = user;
-       this.outputEvent.emit(this.bike);
-       this._route.navigate(['/colors']);
+    toColors() {
+        if (this.bikeSelected) {
+            this.outputEvent.emit(this.bike);
+            this._route.navigate(['/colors', this.bike.Id]);
+        } else {
+            console.log(false);
+        }
     }
 
     selectedEvent(bike) { }
@@ -56,16 +59,16 @@ export class BikeSelectorComponent {
         console.log(this.bike);
         this.bike.Name = value.Name;
         this.bike.Price = value.Price;
-        this.bike.Id = value.Id;
+        this.bike.Id = value.$key;
         this.bike.imageurl = value.imageurl;
 
         console.log(this.bike);
-        console.log(value);
 
         this._totalPrice = 0;
         this._totalPrice += value.Price;
 
         this._imageUrl = value.imageurl;
+
         this.bikeSelected = true;
         console.log(this.bikeSelected);
     }
