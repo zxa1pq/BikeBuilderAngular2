@@ -305,7 +305,7 @@
               transform: translateY(0);
     }
     .cd-builder-footer .selected-product {
-      display: block;
+      
       position: absolute;
       top: 50%;
       bottom: auto;
@@ -345,6 +345,7 @@
       color: #24221F;
       font-size: 3.2rem;
       margin-top: 4px;
+      float:right;
     }
     .cd-builder-footer.disabled .selected-product {
       /* translateX is equal to img width (197px) + img margin-right (27px) */
