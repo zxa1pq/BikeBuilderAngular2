@@ -11,5 +11,6 @@ export const routing = RouterModule.forRoot([
     { path: 'colors', component: BikeColorComponent},
     { path: 'colors/:id', component: BikeColorComponent},
     { path: 'accessories', component: BikeAccessoryComponent},
+    { path: 'accessories/:id', component: BikeAccessoryComponent},
     { path: 'summary', component: SummaryComponent}
 ]);

@@ -18,6 +18,7 @@ import { BikeSelectorComponent } from './bike-selector.component';
 import { BikeAccessoryComponent } from './bikeaccessory.component';
 import { SummaryComponent } from './summary.component';
 import { BikeComponent } from './bike.component';
+import { AccessoryitemComponent } from './accessoryitem.component';
 
 export const config = {
   apiKey: 'AIzaSyC4E7exIjh-LvOy2X38qwBgTi6HnEYxSkA',
@@ -41,7 +42,7 @@ export const config1 = {
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, BotnavComponent, TopnavComponent, BikeComponent, BikeSelectorComponent, BikeColorComponent,
-    BikeAccessoryComponent, SummaryComponent
+    BikeAccessoryComponent, SummaryComponent, AccessoryitemComponent
   ],
   imports: [
     BrowserModule, routing, HttpModule, AngularFireDatabaseModule, ReactiveFormsModule, AngularFireModule.initializeApp(config1, 'second'),

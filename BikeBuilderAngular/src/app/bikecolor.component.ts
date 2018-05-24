@@ -38,8 +38,8 @@ export class BikeColorComponent {
 
     ngOnInit() {
     }
-    next() {
-        this._router.navigate(['accessories']);
+    gotoAc() {
+        this._router.navigate(['accessories', 1]);
     }
 
 }
