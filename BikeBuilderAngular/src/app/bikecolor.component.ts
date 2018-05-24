@@ -22,11 +22,14 @@ export class BikeColorComponent {
     bikeService;
     constructor(private _router: Router, private _route: ActivatedRoute, bikeService: BikeService) {
         this._imageUrl = 'assets/img/bike-default.png';
-        // this.bikes = _bikeService.bikeColors(this.id);
-      //  this.db = new AngularFireDatabase(_firebaseAppFactory(config, 'first'));
-        // this.bikes = this.db.list('/');
+
+        this._route.params.subscribe(params => {
+            this.id = params['id'];
+            console.log(this.id);
+            console.log('break');
+        });
         console.log('constructor1');
-        this.bikess = bikeService.bikeColors(1);
+        this.bikess = bikeService.bikeColors(this.id);
         this.bikess.forEach(element => {
             console.log(element);
         });
@@ -34,11 +37,6 @@ export class BikeColorComponent {
     }
 
     ngOnInit() {
-        this._route.params.subscribe(params => {
-            this.id = params['id'];
-            console.log(this.id);
-            console.log('break');
-        });
     }
     next() {
         this._router.navigate(['accessories']);

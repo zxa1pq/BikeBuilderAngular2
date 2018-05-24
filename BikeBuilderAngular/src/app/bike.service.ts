@@ -15,9 +15,9 @@ export class BikeService {
     private _router: Router;
     public ddb: FirebaseApp;
     constructor() {
+        this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
     }
     Bikes() {
-        this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
         this.bikes = this.db.list('/');
         return this.bikes;
     }
@@ -25,8 +25,7 @@ export class BikeService {
     getImages() {
     }
     bikeColors(id) {
-        this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
-        this.bikes = this.db.list('/' + id);
+        this.bikes = this.db.list('/' + id + '/Color/');
         return this.bikes;
     }
     push(bike) {}

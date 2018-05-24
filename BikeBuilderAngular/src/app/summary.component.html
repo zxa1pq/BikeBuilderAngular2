@@ -1,46 +1,86 @@
-<div class="checkout-summary">
-    <div class="checkout-summary-title">
-      <h5>Your Order</h5>
-      <h5>2 Items</h5>
+<div class="container">
+  <div class="row">
+    <div class="page-header">
+
+    <h1>Summary</h1>
+
     </div>
-  
-    <div class="checkout-summary-item">
-      <img src="https://placeimg.com/100/80/any">
-      <div class="item-name">
-        <a>Comfy Knit Blazer</a>
-        <p><span class="title">Color: </span>Blue</p>
-        <p><span class="title">Size: </span>M</p>
-      </div>
-      <div class="item-price">
-        <p class="title">$24.99</p>
-        <a href="#">Remove</a>
-      </div>
-    </div>
-    <div class="checkout-summary-item">
-      <img src="https://placeimg.com/100/80/any">
-      <div class="item-name">
-        <a>Comfy Knit Blazer</a>
-        <p><span class="title">Color: </span>Blue</p>
-        <p><span class="title">Size: </span>M</p>
-      </div>
-      <div class="item-price">
-        <p class="title">$24.99</p>
-        <a href="#">Remove</a>
-      </div>
-    </div>
-    <div class="checkout-summary-details">
-      <div class="left">
-        <p><strong>Subtotal:</strong></p>
-        <p><strong>Tax:</strong></p>
-        <p><strong>Total:</strong></p>
-      </div>
-      <div class="right">
-        <p>$10.99</p>
-        <p>$2.00</p>
-        <p>$12.99</p>
-      </div>
-    </div>
-    <button class="button expanded">Proceed to Checkout</button>
+
+
   </div>
+
+
+</div>
+   
+   
+   
+   <div class="container">
+      <div class="row">
+        <div class="col-md-5 my-auto" style="border-right: 1px solid;">
+                
+                  <img src="{{summaryimg}}" class="img-fluid"align="justify"> 
+          </div>
+        <div class="col-md-7 my-auto" align="right">
+                    <div class="checkout-summary">
+                      <div class="checkout-summary-title">
+                        <h5>{{summarydataOrders}}</h5>
+                        <h5>{{summarydataItems}}</h5>
+                      </div>
+                    
+                      <div class="checkout-summary-item">
+                        <div class="item-name">
+                          <a>{{summarydataModel}}</a>
+                          <p><span class="title">{{summarydataColours}} </span>{{summarydataBikeColour}}</p>
+                          <p><span class="title">{{summarydataAccessories}} </span>{{summarydataAccessoriesType}} <span>{{summarydataAccessoriesPrice}}</span></p>
+                        </div>
+                        <div class="item-price">
+                          <p class="title">{{summarydataBikePrice}}</p>
+                          <button type="button" class="btn btn-outline-danger">Remove</button>
+                        </div>
+                      </div>
+                      <div class="checkout-summary-details">
+                        <div class="left">
+                          <p><strong>{{summarydataSubTot}}</strong></p>
+                          <p><strong>{{summarydataTax}}</strong></p>
+                          <p><strong>{{summarydataTotal}}</strong></p>
+                        </div>
+                        <div class="right">
+                          <p>{{summarydataSubPrice}}</p>
+                          <p>{{summarydataTaxPrice}}</p>
+                          <p>{{summarydataGrandTot}}</p>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+      </div>    
+    
+    
+    
+    
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="" style="padding-top: 1%; ">
+              <div class="row" >
+                  <div class="col-lg-6" id="ourRow" >
+                      <a href="#" class="btn btn-primary" style=" padding-right: 0!important;
+                      padding-left: 0!important;height: 80px; width: 100%;  font-size: 35px; text-align:center; background-color: #FFFF00;  " ><strong>Return</strong></a>
+                  </div>              
+                                    
+                  <div class="col-lg-6" id="ourRow">
+                      <a href="#" class="btn btn-primary" style=" padding-right: 0!important;
+                      padding-left: 0!important; height: 80px; width: 100%;  font-size: 35px; text-align:center; background-color: #4CAF50;  " ><strong>Checkout</strong></a>
+                    </div>
+              </div>
+             
+                            
+      
+      </div>
+          </div>
+          
+        
+      </footer>
+    
   
   
