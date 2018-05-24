@@ -19,6 +19,7 @@ export class BikeSelectorComponent {
     private db: AngularFireDatabase;
     private _router: Router;
     public ddb: FirebaseApp;
+
     bgimage = 'assets/img/schenley.jpg';
     bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
     bikes;

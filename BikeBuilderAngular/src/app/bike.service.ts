@@ -9,7 +9,7 @@ import 'firebase/storage';
 
 export class BikeService {
 
-    users;
+    bikes;
 
     private db: AngularFireDatabase;
     private _router: Router;
@@ -18,12 +18,18 @@ export class BikeService {
     }
     Bikes() {
         this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
-        this.users = this.db.list('/');
-        return this.users;
+        this.bikes = this.db.list('/');
+        return this.bikes;
     }
 
     getImages() {
     }
+    bikeColors(id) {
+        this.db = new AngularFireDatabase(_firebaseAppFactory(config1, 'second'));
+        this.bikes = this.db.list('/' + id);
+        return this.bikes;
+    }
+    push(bike) {}
     next() {
         console.log('hello');
     }
