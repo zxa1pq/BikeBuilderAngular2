@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BikeService } from '././/Services/bike.service';
-import { AngularFireDatabase } from 'angularfire2/database-deprecated';
-import { FirebaseAppName, FirebaseAppProvider, FirebaseApp } from 'angularfire2';
-import { _firebaseAppFactory } from 'angularfire2/firebase.app.module';
-import { config1, config } from './app.module';
+import { Bike } from './Models/bike';
 @Component({
     selector: 'app-bikecolor',
     templateUrl: `./bikecolor.component.html`,
@@ -14,22 +11,22 @@ import { config1, config } from './app.module';
 
 export class BikeColorComponent {
     _imageUrl: string;
-    private db: AngularFireDatabase;
     bikeimg = 'assets/img/fullBike/BlueBirdPlain.png';
-    id;
     bike;
     bikess;
     bikeService;
+    selectedBike: Bike;
     constructor(private _router: Router, private _route: ActivatedRoute, bikeService: BikeService) {
         this._imageUrl = 'assets/img/Frames/E8000_frame_Submarine.png';
+       this.selectedBike = new Bike();
 
         this._route.params.subscribe(params => {
-            this.id = params['id'];
-            console.log(this.id);
+            this.selectedBike.Id = params['id'];
+            console.log(this.selectedBike.Id);
             console.log('break');
         });
-        console.log('constructor1');
-        this.bikess = bikeService.bikeColors(this.id);
+    console.log('constructor1');
+        this.bikess = bikeService.bikeColors(this.selectedBike.Id);
         this.bikess.forEach(element => {
             console.log(element);
         });
@@ -42,7 +39,7 @@ export class BikeColorComponent {
         this._router.navigate(['models']);
     }
     gotoAc() {
-        this._router.navigate(['accessories', this.id]);
+        this._router.navigate(['accessories', this.selectedBike.Id]);
     }
     changeColorOne() {
         this._imageUrl = 'assets/img/fullBike/LizardPlain.png';

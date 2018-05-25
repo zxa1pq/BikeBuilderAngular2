@@ -11,7 +11,7 @@ export class AccessoryitemComponent {
     @Output() outputEvent: EventEmitter<any> = new EventEmitter();
     @Input() data;
 
-    bclick(user) {
-        this.outputEvent.emit(user);
+    bclick(item) {
+        this.outputEvent.emit(item);
     }
 }

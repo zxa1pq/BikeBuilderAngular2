@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Bike } from './Models/bike';
 
 @Component({
     selector: 'app-bike',
@@ -8,10 +9,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class BikeComponent {
     _totalPrice: any;
     bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
+    sbike: Bike;
     @Output() outputEvent: EventEmitter<any> = new EventEmitter();
-    @Input() data;
+    @Input() bike;
 
-    bclick(user) {
-        this.outputEvent.emit(user);
+    bclick(sbike) {
+        this.outputEvent.emit(sbike);
     }
 }

@@ -5,10 +5,10 @@
         Select your new Ebullitt model
     
         </div>
-    <div class="row justify-content-center" style="padding-top: 4%;" id="bg-row" style="">
+    <div class="row justify-content-center" style="padding-top: 4%;" id="bg-row">
   <div *ngFor="let bike of bikes | async">
     <div class="col-sm-6" style="padding-top: 35px;">
-      <app-bike [data]="bike" (outputEvent)="handleEvent($event)"></app-bike>
+      <app-bike [bike]="bike" (outputEvent)="handleEvent($event)"></app-bike>
   </div>
   <footer class="cd-builder-footer step-1">
     <div class="selected-product">
@@ -23,7 +23,6 @@
     <ul>
       <li class="next nav-item">
     <ul>
-      <!--[routerLink]="['/colors', user.$key]"-->
       <li class="visible"> <a (click)="toColors()">Colors</a></li>
     </ul>
   </li>
