@@ -1,50 +1,74 @@
-<app-topnav></app-topnav>
-<div class="container-fluid"  style="text-align:center; padding-top:1.5%;">
+<button type="button" class="btn btn-info">Return home</button>
+
+<nav class="cd-builder-main-nav disabled">
+  <ul>
+    <li>
+      <a href="models">Models</a>
+    </li>
+    <li>
+      <a href="colors">Colors</a>
+    </li>
+    <li  class="active">
+      <a href="accessories">Accessories</a>
+    </li>
+    <li>
+      <a href="summary">Summary</a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid" style="text-align:center; padding-top:1.5%;">
 
 
-<div class="container">
-    <div class="span12 text-center" style=" padding-top: 30px;">
+    <div class="container">
+        <div class="span12 text-center" style=" padding-top: 30px;">
 
-        Select accessories 
-    
+            Select accessories
+
         </div>
-    <div class="row justify-content-center" id="rowBG"style="padding-top: 6%;">
-  <div *ngFor="let item of accessories | async">
-    <div class="col-sm-6">
-      <app-accessory [data]="item" (outputEvent)="handleEvent($event)"></app-accessory>
-  </div>
-</div>
-</div></div>
+        <div class="row justify-content-center" id="rowBG" style="padding-top: 6%;">
+            <div *ngFor="let item of accessories | async">
+                <div class="col-sm-6">
+                    <app-accessory [data]="item" (outputEvent)="handleEvent($event)"></app-accessory>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </div>
 
 <footer class="footer">
     <div class="container-fluid">
-      <div class="row justify-content-center" style="padding-top: 1%;">
-          <div class="row">
-              <div class="col-lg-3">
-                  <a href="#" class="btn btn-primary" style="height: 60px; width: 180px; padding-top: 15px; font-size: 23px; text-align:center; background-color: #FFFF00;                " ><strong>Previous</strong></a>
-              </div>
-              <div class="col-lg-3">
-                  <img src="{{_imageUrl}}" alt="Product preview" style="height: 84px; width: 290px;"> 
-              </div>
-              <div class="col-lg-3">
-                  
-                  <div class="tot-price" style="height: 40px; width: 100px;">
-                      <span>Total</span>
-                      <span class="total" >$<b>{{_totalPrice}}</b></span>
-                      </div>
-                                </div>
-              <div class="col-lg-3">
-                  <a href="#" class="btn btn-primary" style="height: 60px; width: 180px; padding-top: 15px; font-size: 23px; text-align:center; background-color: #4CAF50;" ><strong>Summary</strong></a>
+        <div class="row justify-content-center" style="padding-top: 1%;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <a (click)="gotoColors()" class="btn btn-primary" style="height: 60px; width: 180px; padding-top: 15px; font-size: 23px; text-align:center; background-color: #FFFF00;                ">
+                        <strong>Previous</strong>
+                    </a>
                 </div>
-          </div>
-         
-                        
-  
-  </div>
-      </div>
-      
-    
-  </footer>
+                <div class="col-lg-3">
+                    <img src="{{_imageUrl}}" alt="Product preview" style="height: 84px; width: 290px;">
+                </div>
+                <div class="col-lg-3">
+
+                    <div class="tot-price" style="height: 40px; width: 100px;">
+                        <span>Total</span>
+                        <span class="total">$
+                            <b>{{_totalPrice}}</b>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <a (click)="gotoSum()" class="btn btn-primary" style="height: 60px; width: 180px; padding-top: 15px; font-size: 23px; text-align:center; background-color: #4CAF50;">
+                        <strong>Summary</strong>
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</footer>

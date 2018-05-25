@@ -1,3 +1,25 @@
+.dot1 {
+  height: 75px;
+  width: 75px;
+  background-color: rgb(71, 223, 63);
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot2 {
+  height: 75px;
+  width: 75px;
+  background-color: rgb(74, 144, 235);
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot3 {
+  height: 75px;
+  width: 75px;
+  background-color: rgb(225, 38, 38);
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .thumbnail{
     display:block;
     padding: 4%;

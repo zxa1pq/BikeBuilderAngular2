@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
-import { BikeService } from './bike.service';
-import { BikeAccessory } from './BikeAccessory';
+import { BikeService } from '././/Services/bike.service';
+import { BikeAccessory } from './Models/BikeAccessory';
 @Component({
     selector: 'app-bikeaccessory',
     templateUrl: './bikeaccessory.component.html',
@@ -50,8 +50,13 @@ export class BikeAccessoryComponent {
 
 
     }
-    summary() {
+    gotoColors() {
+        this._router.navigate(['colors']);
+    }
+
+    gotoSum() {
         this._router.navigate(['summary']);
-      }
+        console.log('clicked');
+    }
 
 }

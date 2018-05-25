@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BikeService } from './Services/bike.service';
 
 @Component({
     selector: 'app-summary',
@@ -24,9 +25,6 @@ import { Router } from '@angular/router';
         {
             margin: 0px 0 0px;
         }
-
-        
-  
     `]
 
 
@@ -34,7 +32,7 @@ import { Router } from '@angular/router';
 })
 
 export class SummaryComponent {
-    summaryimg = 'assets/img/bluebird1.png';
+    summaryimg = 'assets/img/fullBike/BlueBirdPlain.png';
     summaryRemove = 'assets/img/close.png';
     summarydataOrders = 'Your Order';
     summarydataItems = 'Items';
@@ -54,11 +52,16 @@ export class SummaryComponent {
 
 
 
-
+bikeService;
 
     constructor(private _router: Router) {
+this.bikeService = new BikeService();
+    }
+    returnToAc() {
+        this._router.navigate(['accessories']);
     }
     summary() {
-        this._router.navigate(['summary']);
+        this.bikeService.push();
+        // this._router.navigate(['summary']);
     }
 }

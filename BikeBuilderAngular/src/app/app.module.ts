@@ -21,12 +21,12 @@ import { BikeComponent } from './bike.component';
 import { AccessoryitemComponent } from './accessoryitem.component';
 
 export const config = {
-  apiKey: 'AIzaSyC4E7exIjh-LvOy2X38qwBgTi6HnEYxSkA',
-  authDomain: 'crudproject-80a90.firebaseapp.com',
-  databaseURL: 'https://crudproject-80a90.firebaseio.com',
-  projectId: 'crudproject-80a90',
-  storageBucket: 'crudproject-80a90.appspot.com',
-  messagingSenderId: '484980870717'
+  apiKey: 'AIzaSyApNjvhk12xI_PR5SNcHS4BQ9yCqiLe8Lc',
+  authDomain: 'buildedbikes.firebaseapp.com',
+  databaseURL: 'https://buildedbikes.firebaseio.com',
+  projectId: 'buildedbikes',
+  storageBucket: '',
+  messagingSenderId: '552384458120'
 };
 
 export const config1 = {

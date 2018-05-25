@@ -5,8 +5,8 @@ import { FirebaseAppName, FirebaseAppProvider, FirebaseApp } from 'angularfire2'
 import { _firebaseAppFactory } from 'angularfire2/firebase.app.module';
 import { config1 } from './app.module';
 import { config } from './app.module';
-import { BikeService } from './bike.service';
-import { Bike } from './bike';
+import { BikeService } from '././/Services/bike.service';
+import { Bike } from './Models/bike';
 
 
 @Component({
