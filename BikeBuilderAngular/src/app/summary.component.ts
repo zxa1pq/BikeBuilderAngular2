@@ -52,10 +52,13 @@ export class SummaryComponent {
 
 
 
-bikeService;
+    bikeService;
 
     constructor(private _router: Router) {
-this.bikeService = new BikeService();
+        this.bikeService = new BikeService();
+    }
+    rHome() {
+        this._router.navigate(['']);
     }
     returnToAc() {
         this._router.navigate(['accessories']);

@@ -16,7 +16,9 @@ export class BikeColorComponent {
     bikess;
     bikeService;
     selectedBike: Bike;
+    _totalPrice;
     constructor(private _router: Router, private _route: ActivatedRoute, bikeService: BikeService) {
+        this._totalPrice = 0;
         this._imageUrl = 'assets/img/Frames/E8000_frame_Submarine.png';
        this.selectedBike = new Bike();
 
@@ -34,6 +36,9 @@ export class BikeColorComponent {
     }
 
     ngOnInit() {
+    }
+    rHome() {
+        this._router.navigate(['']);
     }
     returnToModels() {
         this._router.navigate(['models']);

@@ -1,3 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2);
+
+html,body {
+  height:100%;
+}
+
+@media screen and (max-width: 1600px) {
+
+.container-lol {
+        background-image: url("/assets/img/topimg4.png"); 
+        height: 800px;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+      
+
+.panel-body {
+        text-align: justify;
+        font-size: 18px;
+        font-family: 'exo 2';
+        color: black;
+        background-color: #ffffff;
+        margin-top: 200px;
+        margin-left: 140px;
+        width: 100%;
+}
+
+
+.panel-body-1 {
+        margin-top: 130px;
+        margin-left: 100px;
+        width: 130%;
+        height: 130%;
+    }
+
+
+
+.container-lal {
+        padding-top: 150px;
+        width: 100%;
+        min-height: 800px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+}
+
+
+@media screen and (max-width: 1359px) {
+
+.container-lol {
+        background-image: url("/assets/img/topimg4.png"); 
+        height: 800px;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+      
+
+.panel-body {
+        text-align: justify;
+        font-size: 18px;
+        font-family: 'exo 2';
+        color: black;
+        background-color: #ffffff;
+        margin-top: 200px;
+        margin-left: 140px;
+        width: 100%;
+}
+
+
+.panel-body-1 {
+        margin-top: 200px;
+        margin-left: 100px;
+        width: 130%;
+        height: 130%;
+    }
+
+
+
+.container-lal {
+        padding-top: 150px;
+        width: 100%;
+        min-height: 800px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+.container-lol {
+        background-image: url("/assets/img/topimg5.png"); 
+        height: 800px;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+      
+
+.panel-body {
+        text-align: justify;
+        font-size: 16px;
+        font-family: 'exo 2';
+        color: black;
+        background-color: #ffffff;
+        margin-top: 5px;
+        margin-left: 140px;
+        width: 100%;
+}
+
+
+.panel-body-1 {
+        margin-top: 50px;
+        margin-left: 100px;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+.container-lal {
+        padding-top: 150px;
+        width: 100%;
+        min-height: 500px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+
+.container-lol {
+        background-image: url("/assets/img/topimg6.png"); 
+        height: 800px;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+      
+
+.panel-body {
+        text-align: justify;
+        font-size: 14px;
+        font-family: 'exo 2';
+        color: black;
+        background-color: #ffffff;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+}
+
+
+.panel-body-1 {
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+.container-lal {
+        padding-top: 10px;
+        width: 100%;
+        min-height: 300px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+.container-lol {
+        background-image: url("/assets/img/mobile.png"); 
+        height: 800px;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+      
+
+.panel-body {
+        text-align: justify;
+        font-size: 14px;
+        font-family: 'exo 2';
+        color: black;
+        background-color: #ffffff;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+}
+
+
+.panel-body-1 {
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+.container-lal {
+        padding-top: 10px;
+        width: 100%;
+        min-height: 300px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+}
+
 .dot1 {
   height: 75px;
   width: 75px;

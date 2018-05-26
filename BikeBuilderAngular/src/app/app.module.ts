@@ -11,8 +11,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 import { HomeComponent } from './Home.component';
-import { BotnavComponent } from './botnav.component';
-import { TopnavComponent } from './topnav.component';
 import { BikeColorComponent } from './bikecolor.component';
 import { BikeSelectorComponent } from './bike-selector.component';
 import { BikeAccessoryComponent } from './bikeaccessory.component';
@@ -41,7 +39,7 @@ export const config1 = {
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, BotnavComponent, TopnavComponent, BikeComponent, BikeSelectorComponent, BikeColorComponent,
+    AppComponent, HomeComponent, BikeComponent, BikeSelectorComponent, BikeColorComponent,
     BikeAccessoryComponent, SummaryComponent, AccessoryitemComponent
   ],
   imports: [

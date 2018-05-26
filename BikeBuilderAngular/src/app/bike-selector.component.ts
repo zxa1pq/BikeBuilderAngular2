@@ -36,6 +36,9 @@ export class BikeSelectorComponent {
     ngOnInit() {
     }
 
+    rHome() {
+        this._route.navigate(['']);
+    }
     toColors() {
         if (this.bikeSelected) {
             this.outputEvent.emit(this.bike);

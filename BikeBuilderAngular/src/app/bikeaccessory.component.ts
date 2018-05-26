@@ -44,6 +44,9 @@ export class BikeAccessoryComponent {
 
 
     }
+    rHome() {
+        this._router.navigate(['']);
+    }
     gotoColors() {
         this._router.navigate(['colors']);
     }
