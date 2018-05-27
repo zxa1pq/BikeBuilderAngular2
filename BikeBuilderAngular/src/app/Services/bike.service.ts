@@ -21,22 +21,20 @@ export class BikeService {
         return this.bikes;
     }
 
-    getImages() {
-    }
     bikeColors(id) {
         this.bikes = this.db.list('/' + id + '/Color/');
         return this.bikes;
     }
+
     Geta(id) {
     this.bikes = this.db.list('/' + id + '/Accessory/');
     return this.bikes;
 }
 
-
     push() {
-        this.bikeObject.Name = 'stasdsaeps';
-        this.bikeObject.Price = '12adsad34';
-        this.bikeObject.Description = 'heladdssdadlo';
+        this.bikeObject.Name = 'Steps EBULLITT';
+        this.bikeObject.Price = '1234';
+        this.bikeObject.Description = 'Heavy equipment';
 
         this.storedBikes.list('/').push(this.bikeObject);
     }

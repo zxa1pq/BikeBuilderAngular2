@@ -11,7 +11,6 @@ import { Bike } from './Models/bike';
 })
 
 export class BikeSelectorComponent {
-    private _router: Router;
 
     bgimage = 'assets/img/schenley.jpg';
     bikeimg = 'assets/img/Frames/E8000_frame_Submarine.png';
@@ -29,8 +28,7 @@ export class BikeSelectorComponent {
         this._totalPrice = 0;
         this._imageUrl = 'assets/img/bike-default.png';
         this.bikes = bikeService.Bikes();
-            this.cart = [];
-
+        this.cart = [];
     }
 
     ngOnInit() {
@@ -41,7 +39,6 @@ export class BikeSelectorComponent {
     }
     toColors() {
         if (this.bikeSelected) {
-            this.outputEvent.emit(this.bike);
             this._route.navigate(['/colors', this.bike.Id]);
         } else {
             console.log(false);
@@ -50,13 +47,10 @@ export class BikeSelectorComponent {
 
     handleEvent(value) {
         this.bike = value;
-        console.log(this.bike);
         this.bike.Name = value.Name;
         this.bike.Price = value.Price;
         this.bike.Id = value.$key;
         this.bike.imageurl = value.imageurl;
-
-        console.log(this.bike);
 
         this._totalPrice = 0;
         this._totalPrice += value.Price;

@@ -213,7 +213,7 @@ margin-bottom: 25px;}
 @media screen and (max-width: 500px) {
 
 .container-lol {
-        background-image: url("assets/img/mobile.png"); 
+        background-image: url("/assets/img/mobile.png"); 
         height: 800px;
         background-attachment: fixed;
         -webkit-background-size: cover;
@@ -258,7 +258,7 @@ margin-bottom: 25px;}
 
 #rowBG{
   padding-top: 6%;
-  background-image: url(assets/img/belfast.png);
+  background-image: url(/assets/img/belfast.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -269,7 +269,7 @@ margin-bottom: 25px;}
   background-repeat: no-repeat;
 }
 #bg-row{
-  background-image: url(assets/img/belfast.png);
+  background-image: url(/assets/img/belfast.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

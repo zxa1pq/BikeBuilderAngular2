@@ -44,7 +44,11 @@ export class BikeColorComponent {
         this._router.navigate(['models']);
     }
     gotoAc() {
+        if (this.selectedBike.Id) {
         this._router.navigate(['accessories', this.selectedBike.Id]);
+        } else {
+            this._router.navigate(['accessories']);
+        }
     }
     changeColorOne() {
         this._imageUrl = 'assets/img/fullBike/LizardPlain.png';
